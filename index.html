@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Riya!</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .heart {
+            color: #ff4d4d;
+            font-size: 100px;
+            animation: heartbeat 1.5s infinite;
+        }
+        .message {
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="heart">❤️</div>
+        <div class="message">Happy Valentine's Day, Riya!</div>
+    </div>
+    <script>
+        const messages = [
+            "You're my sunshine on a cloudy day.",
+            "Every moment with you is a treasure.",
+            "My heart beats for you, Riya.",
+            "You're my one and only Valentine.",
+
+
+            "I love you very much Devi ji .",
+
+            "YOUR TEDDY."
+        ];
+
+        const messageElement = document.querySelector('.message');
+        let currentMessageIndex = 0;
+
+        setInterval(() => {
+            messageElement.textContent = messages[currentMessageIndex];
+            currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+        }, 3000);
+    </script>
+</body>
+</html>
